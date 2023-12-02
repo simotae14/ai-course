@@ -19,4 +19,4 @@ const results = await openai.chat.completions.create({
   ],
 })
 
-console.log(results)
+console.log(results.choices[0])
