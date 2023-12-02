@@ -14,9 +14,10 @@ const results = await openai.chat.completions.create({
     },
     {
       role: 'user',
-      content: 'Hi!',
+      content:
+        'Hi! Can you tell me what is the best way to learn how to do maths?',
     },
   ],
 })
 
-console.log(results.choices[0])
+console.log(results.choices[0].message.content)

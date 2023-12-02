@@ -1,5 +1,13 @@
 # ai-course
 
+# To remember
+
+Add the open ai key in the .env file in the format
+
+```
+OPENAI_API_KEY='...'
+```
+
 To install dependencies:
 
 ```bash
