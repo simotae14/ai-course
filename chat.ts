@@ -18,6 +18,7 @@ const newMessage = async (history: Message[], message: Message) => {
   const chatCompletion = await openai.chat.completions.create({
     messages: [...history, message],
     model: 'gpt-3.5-turbo',
+    temperature: 0, // the accuracy, between 0 and 2
   })
 
   return chatCompletion.choices[0].message
