@@ -37,3 +37,11 @@ run
 ```bash
 bun search.ts
 ```
+
+## Documents qa
+
+run
+
+```bash
+bun qa.ts "question"
+```
