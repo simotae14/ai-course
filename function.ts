@@ -17,6 +17,12 @@ const functions = {
   calculate: async ({ expression }: { expression: string }) => {
     return math.evaluate(expression)
   },
+  // Generate images with dall e
+  generateImage: async ({ prompt }) => {
+    const result = await openai.images.generate({ prompt })
+    console.log(result)
+    return ''
+  },
 }
 
 const getCompletion = (messages) => {
@@ -40,6 +46,21 @@ const getCompletion = (messages) => {
             },
           },
           required: ['expression'], // parameters required
+        },
+      },
+      {
+        name: 'generateImage',
+        description: 'Create or generate image based on a description',
+        parameters: {
+          type: 'object',
+          properties: {
+            prompt: {
+              type: 'string',
+              // describe the paramater
+              description: 'The description of the image to generate',
+            },
+          },
+          required: ['prompt'], // parameters required
         },
       },
     ],
