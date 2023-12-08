@@ -45,3 +45,11 @@ run
 ```bash
 bun qa.ts "question"
 ```
+
+## Function calls
+
+run
+
+```bash
+bun function.ts "expression"
+```
